@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { Input } from "@/components/ui/input";
+import { fetchUser } from "./actions";
 
 const formSchema = z.object({
   userid: z.string(),
@@ -15,8 +16,9 @@ export default function Home() {
     resolver: zodResolver(formSchema),
   })
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  async function onSubmit(values: z.infer<typeof formSchema>) {
     alert(values.userid);
+    await fetchUser(values.userid)
   }
   return (
     <>
