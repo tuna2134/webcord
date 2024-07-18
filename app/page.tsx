@@ -7,7 +7,7 @@ import { z } from "zod";
 import { Input } from "@/components/ui/input";
 
 const formSchema = z.object({
-  userid: z.bigint(),
+  userid: z.string(),
 })
 
 export default function Home() {
@@ -16,12 +16,12 @@ export default function Home() {
   })
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
+    alert(values.userid);
   }
   return (
     <>
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)}>
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
           <FormField
             control={form.control}
             name="userid"
