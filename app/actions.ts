@@ -22,5 +22,6 @@ export async function fetchUser(userId: string): Promise<User> {
     await kv.set(`user:${userId}`, user, {
         ex: 60,
     });
+    console.log(user);
     return user as User;
 }
