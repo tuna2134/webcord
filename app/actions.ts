@@ -18,9 +18,9 @@ export async function fetchUser(userId: string): Promise<User> {
             Authorization: `Bot ${process.env.DISCORD_TOKEN}`,
         },
     });
-    user = await res.json()
+    user = await res.json();
     await kv.set(`user:${userId}`, user, {
         ex: 60,
     });
-    return await res.json();
+    return user;
 }
