@@ -11,7 +11,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { Input } from "@/components/ui/input";
-import { fetchUser, User } from "./actions";
+import { fetchUser, User } from "../actions";
 import React from "react";
 import {
     Table,
