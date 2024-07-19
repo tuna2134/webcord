@@ -10,7 +10,7 @@ export interface User {
 
 export async function fetchUser(userId: string): Promise<User> {
     let user: User | null = await kv.get(`user:${userId}`);
-    if (user) {
+    if (user !== null) {
         return user;
     }
     const res = await fetch(`https://discord.com/api/v10/users/${userId}`, {
