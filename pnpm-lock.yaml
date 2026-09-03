@@ -71,7 +71,7 @@ importers:
         version: 16.3.4(@typescript-eslint/parser@8.46.2(eslint@10.9.1(jiti@1.21.7))(typescript@7.0.2))(eslint@10.9.1(jiti@1.21.7))(typescript@7.0.2)
       postcss:
         specifier: ^8
-        version: 8.5.26
+        version: 8.5.28
       prettier:
         specifier: ^3.3.3
         version: 3.9.6
@@ -1792,6 +1792,10 @@ packages:
 
   postcss@8.5.26:
     resolution: {integrity: sha512-u82N74LFzG8ca+dD8puPnplTXoGH4fTPpVGuIbt36G3qvNlkvfD0lEAZSxaly3KX8TS/L1A1gsCEmvKmBcVbkQ==}
+    engines: {node: ^10 || ^12 || >=14}
+
+  postcss@8.5.28:
+    resolution: {integrity: sha512-RRuzqDtt5Y9h3quz5hWhK+TPnsmVs6WwSU6LkJMeY4HstUEDuYTG8UJSdawMRzmzAtV+KEoG8N3Qg2qLy5vM/A==}
     engines: {node: ^10 || ^12 || >=14}
 
   prelude-ls@1.2.1:
@@ -3824,6 +3828,12 @@ snapshots:
       source-map-js: 1.2.1
 
   postcss@8.5.26:
+    dependencies:
+      nanoid: 3.3.18
+      picocolors: 1.1.1
+      source-map-js: 1.2.1
+
+  postcss@8.5.28:
     dependencies:
       nanoid: 3.3.18
       picocolors: 1.1.1
